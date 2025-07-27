@@ -1,0 +1,233 @@
+body {
+  background: #111;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('bg-blur.jpg') center center no-repeat;
+  background-size: cover;
+  filter: brightness(0.7) blur(2px);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  min-height: 100vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  z-index: 10; /* sticky header */
+}
+
+.profile-circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  margin-bottom: 8px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -43px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.socials {
+  margin-top: 52px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.socials a {
+  color: #111;
+  background: #fff;
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.socials a:hover {
+  background: #f55;
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  background: #fff;
+  border-bottom: 10px solid transparent;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0; padding: 0;
+}
+
+nav li {
+  padding: 16px 26px;
+  font-weight: bold;
+  color: #222;
+  font-size: 1.12rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+nav li.active, nav li.commission {
+  background: #111;
+  color: #fff;
+}
+
+nav li.commission {
+  margin-left: 16px;
+  border-bottom: 8px solid #111;
+}
+
+main {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  margin: 0;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 48px 48px 16px 48px;
+  min-height: 400px;
+}
+
+.about-left {
+  flex: 1.2;
+  padding-right: 32px;
+  font-size: 1.03rem;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.about-mini {
+  font-size: 0.96rem;
+  color: #555;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.about-cn {
+  font-size: 2.1rem;
+  font-weight: 700;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  vertical-align: middle;
+  letter-spacing: 0.1em;
+}
+
+.about-en {
+  font-size: 2.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  margin-left: 0.4em;
+  vertical-align: middle;
+}
+
+.about-left p {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.about-right {
+  flex: 1;
+  color: #888;
+  font-size: 0.97rem;
+  padding-left: 14px;
+  padding-top: 22px;
+}
+
+.about-right ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-right li {
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0 26px 0;
+  margin-top: 26px;
+  color: #888;
+  font-size: 0.99rem;
+}
+
+.footer-img img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.footer-text {
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-credits {
+  color: #bbb;
+  font-size: 0.92rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 1250px) {
+  .container { width: 100vw; }
+  main, .about, header { width: 100%; }
+}
+
+@media (max-width: 900px) {
+  .about { flex-direction: column; }
+  .about-left, .about-right { padding: 0; }
+  .about-left { margin-bottom: 32px; }
+}
