@@ -24,7 +24,7 @@ body {
 }
 
 header {
-  position: sticky;
+  position: absolute;
   top: 0;
   width: 100%;
   background: rgba(255,255,255,0.08);
@@ -48,7 +48,7 @@ header {
   justify-content: center;
   position: absolute;
   left: 50%;
-  top: -43px;
+  top: 43px;
   transform: translateX(-50%);
   z-index: 2;
 }
@@ -60,7 +60,7 @@ header {
 }
 
 .socials {
-  margin-top: 52px;
+  margin-top: 80px;
   margin-bottom: 10px;
   display: flex;
   gap: 14px;
